@@ -1,0 +1,18 @@
+<div style="padding: 2rem;">
+    <form [formGroup]="frmSampleContent">
+
+        <div style="padding-bottom: 0.5rem;">
+            <span class="p-float-label">
+                <input pInputText id="username" [(ngModel)]="value" formControlName="userIdFormControl"/>
+                <label htmlFor="username">Username</label>
+            </span>
+        </div>
+
+        <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" placeholder="Select a City"
+            formControlName="ddCities"></p-dropdown>
+
+    </form>
+    <div style="padding-top: 2rem;">
+        You have selected: {{selectedCity?.name | json}}
+    </div>
+</div>

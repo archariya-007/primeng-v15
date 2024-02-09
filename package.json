@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:mfe": "ng build --output-hashing none --single-bundle true",
+    "start:mfe": "npm run build:mfe && http-server ./dist/primeng-poc -p 8180 -o"
   },
   "private": true,
   "dependencies": {
@@ -14,10 +16,14 @@
     "@angular/common": "^16.0.0",
     "@angular/compiler": "^16.0.0",
     "@angular/core": "^16.0.0",
+    "@angular/elements": "^16.2.12",
     "@angular/forms": "^16.0.0",
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "http-server": "^14.1.1",
+    "ngx-build-plus": "^15.0.0",
+    "primeng": "^15.4.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
