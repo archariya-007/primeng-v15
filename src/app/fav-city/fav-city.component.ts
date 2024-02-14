@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { FormControl, FormGroup } from '@angular/forms';
 
-interface City {
+interface Hero {
   name: string
   code: string
 }
@@ -14,22 +14,67 @@ interface City {
 
 
 export class FavCityComponent implements OnInit {
-  cities: City[] = [
-    { name: 'New York', code: 'NY' },
-    { name: 'Rome', code: 'RM' },
-    { name: 'London', code: 'LDN' },
-    { name: 'Istanbul', code: 'IST' },
-    { name: 'Paris', code: 'PRS' }
+  heros: Hero[] = [
+  { name: 'Iron Man', code: 'IM' },
+  { name: 'Captain America', code: 'CA' },
+  { name: 'Thor', code: 'TH' },
+  { name: 'Hulk', code: 'HK' },
+  { name: 'Black Widow', code: 'BW' },
+  { name: 'Hawkeye', code: 'HE' },
+  { name: 'Spider-Man', code: 'SM' },
+  { name: 'Black Panther', code: 'BP' },
+  { name: 'Doctor Strange', code: 'DS' },
+  { name: 'Ant-Man', code: 'AM' },
+  { name: 'Wasp', code: 'WS' },
+  { name: 'Vision', code: 'VS' },
+  { name: 'Scarlet Witch', code: 'SW' },
+  { name: 'Quicksilver', code: 'QS' },
+  { name: 'Falcon', code: 'FC' },
+  { name: 'Winter Soldier', code: 'WS' },
+  { name: 'Star-Lord', code: 'SL' },
+  { name: 'Gamora', code: 'GM' },
+  { name: 'Rocket Raccoon', code: 'RR' },
+  { name: 'Groot', code: 'GR' },
+  { name: 'Ryu', code: 'RY' },
+  { name: 'Ken', code: 'KN' },
+  { name: 'Chun-Li', code: 'CL' },
+  { name: 'Guile', code: 'GL' },
+  { name: 'Zangief', code: 'ZF' },
+  { name: 'Dhalsim', code: 'DH' },
+  { name: 'Blanka', code: 'BK' },
+  { name: 'E. Honda', code: 'EH' },
+  { name: 'Vega', code: 'VG' },
+  { name: 'Sagat', code: 'SG' },
+  { name: 'M. Bison', code: 'MB' },
+  { name: 'Balrog', code: 'BR' },
+  { name: 'Akuma', code: 'AK' },
+  { name: 'Cammy', code: 'CM' },
+  { name: 'Fei Long', code: 'FL' },
+  { name: 'Dee Jay', code: 'DJ' },
+  { name: 'T. Hawk', code: 'TH' },
+  { name: 'Rose', code: 'RS' },
+  { name: 'Dan', code: 'DN' },
+  { name: 'Sakura', code: 'SK' },
+  { name: 'Superman', code: 'SM' },
+  { name: 'Batman', code: 'BM' },
+  { name: 'Wonder Woman', code: 'WW' },
+  { name: 'Flash', code: 'FL' },
+  { name: 'Green Lantern', code: 'GL' },
+  { name: 'Aquaman', code: 'AQ' },
+  { name: 'Cyborg', code: 'CY' },
+  { name: 'Green Arrow', code: 'GA' },
+  { name: 'Hawkman', code: 'HM' },
+  { name: 'Supergirl', code: 'SG' }
   ];
 
-  selectedCity: City | null = this.cities[1]
+  selectedHero: Hero | null = this.heros[1]
   value: string = ''
   frmSampleContent: FormGroup
 
   constructor() {
     this.frmSampleContent = new FormGroup({
       userIdFormControl: new FormControl('Hello World'),
-      ddCities: new FormControl()
+      ddHero: new FormControl()
     })
   }
   ngOnInit() { }
